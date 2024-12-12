@@ -14,6 +14,7 @@ The grid2op ecosystem is made of different packages with different goals:
 - [grid2game](https://github.com/Grid2op/grid2game) is a graphical user interface that allows real human to "play" the grid2op and to act as a grid2op agent.
 - [grid2viz](https://github.com/Grid2op/grid2viz) is another graphical user interface that allows people to inspect how a grid2op agent has performed when evaluated on a given set of scenarios. It also allows to easily compare an agent with a baseline.
 - [LearningToAlert](https://github.com/Grid2op/LearningToAlert) provides an algorithm to "solve" part of the grid2op actions (sending alert at the right time to a possible human operator)
+- [grid2op-milp-agent](https://github.com/Grid2op/grid2op-milp-agent) is an example of a grid2op agent that is based on linear optimisation and is able to perform topological actions.
 
 # Other packages
 
