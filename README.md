@@ -1,29 +1,42 @@
 # Grid2op
 
-Grid2op aims at make the use of (and the research on) "machine learning" or "artificial intelligence" for power grid operations purposed.
+Grid2Op is a simulation environment for fast, reproducible experiments on power grids. Use it to run large-scale powerflows, to train or evaluate "smart controllers" (heuristic, optimization-based, machine-learning, or any combination) under realistic operational constraints, or to model sequential decision-making in power systems.
 
-# Eco system
+# Ecosystem
 
-The grid2op ecosystem is made of different packages with different goals:
+The Grid2op ecosystem has two parts: **core packages**, which are well maintained, tested, and documented, and **companion packages**, which make the core packages easier to use, integrate them with other tools, or apply them to specific settings.
 
-- [grid2op](https://github.com/Grid2op/grid2op) is the core package. It is pure python, available on pypi and rather flexible. It allows lots of customization and provide default implementation for most of its component
-- [lightsim2grid](https://github.com/Grid2op/lightsim2grid) is a grid2op "backend" that is a port of Pandapower in c++ and is optimized for speed and usability in grid2op
-- [pypowsybl2grid](https://github.com/Grid2op/pypowsybl2grid) is another grid2op "backend", currently under heavy development. It aims at bringing all the power of the powsybl framework (including its capacity to simulate in great detail a powergrid) into the grid2op ecosystem
-- [chronix2grid](https://github.com/Grid2op/chronix2grid) is the package that we use to generate "time series" that are themselves used in grid2op environment. They provide load and generation for each time step of the grid during the entire episode.
-- [l2rpn-baselines](https://github.com/Grid2op/l2rpn-baselines) is pacakge that aims at providing code example to get started in the training of agent able to control a powergrid for some reinforcement learning framework.
-- [grid2game](https://github.com/Grid2op/grid2game) is a graphical user interface that allows real human to "play" the grid2op and to act as a grid2op agent.
-- [grid2viz](https://github.com/Grid2op/grid2viz) is another graphical user interface that allows people to inspect how a grid2op agent has performed when evaluated on a given set of scenarios. It also allows to easily compare an agent with a baseline.
-- [LearningToAlert](https://github.com/Grid2op/LearningToAlert) provides an algorithm to "solve" part of the grid2op actions (sending alert at the right time to a possible human operator)
-- [grid2op-milp-agent](https://github.com/Grid2op/grid2op-milp-agent) is an example of a grid2op agent that is based on linear optimisation and is able to perform topological actions.
+> Using Grid2op for your own experiments and want to share your work? Open a discussion and we'll look at how it could fit into the ecosystem.
+
+The current roadmap is available here: [ROADMAP](https://github.com/Grid2op/.github/blob/main/ROADMAP.md).
+
+## Core packages
+
+There are currently two core packages:
+
+- [grid2op](https://github.com/Grid2op/grid2op) — the core package. Pure Python, available on PyPI, and highly flexible: it allows extensive customization and ships default implementations for most of its components.
+- [lightsim2grid](https://github.com/Grid2op/lightsim2grid) — a fast Grid2op "backend" / "computation engine". It implements the power-flow solvers in C++, optimized for speed and ease of use within Grid2op.
+
+## Companion packages
+
+A non-exhaustive list of current companion packages:
+
+- [pypowsybl2grid](https://github.com/Grid2op/pypowsybl2grid) — another Grid2op backend, under active development. It brings the full power of the PowSyBl framework, including its detailed power-grid simulation, into the ecosystem.
+- [chronix2grid](https://github.com/Grid2op/chronix2grid) — generates the time series used in Grid2op environments, providing load and generation values for every time step of an episode.
+- [l2rpn-baselines](https://github.com/Grid2op/l2rpn-baselines) — code examples to get started training agents that control a power grid, for several reinforcement-learning frameworks.
+- [grid2game](https://github.com/Grid2op/grid2game) — a graphical interface that lets a human "play" Grid2op and act as an agent.
+- [grid2viz](https://github.com/Grid2op/grid2viz) — a graphical interface for inspecting how a Grid2op agent performed across a set of scenarios, and for comparing an agent against a baseline.
+- [LearningToAlert](https://github.com/Grid2op/LearningToAlert) — an algorithm for one part of the Grid2op action space: sending alerts to a human operator at the right moment.
+- [grid2op-milp-agent](https://github.com/Grid2op/grid2op-milp-agent) — an example Grid2op agent based on linear optimization that performs topological actions.
 
 # Other packages
 
-Other contributors are also developing code that could be hosted here. For example, the l2rpn top performers aften publish on github their approach. See https://l2rpn-baselines.readthedocs.io/en/latest/external_contributions.html for an updated list.
+Other contributors develop code that could be hosted here. For example, top L2RPN performers often publish their approaches on GitHub — see the [updated list of external contributions](https://l2rpn-baselines.readthedocs.io/en/latest/external_contributions.html).
 
- The ecosystem is also made of packages hosted elsewhere, for example:
+The ecosystem also includes packages hosted elsewhere, such as:
 
- - a graphical user interface developed by NVIDIA: https://github.com/NVIDIA/energy-sdk-l2rpn
- - some good solutions to the L2RPN competitions:
-   - https://github.com/lajavaness/l2rpn-2023-ljn-agent
-   - https://github.com/enlite-ai/maze-l2rpn-2022-submission
-   - etc. 
+- a graphical interface developed by NVIDIA: https://github.com/NVIDIA/energy-sdk-l2rpn
+- strong solutions to the L2RPN competitions, for example:
+  - https://github.com/lajavaness/l2rpn-2023-ljn-agent
+  - https://github.com/enlite-ai/maze-l2rpn-2022-submission
+- a "computation engine" based on "dynamics" simulation and the gridpack framework see https://github.com/GridOPTICS/GridPACK/tree/grid2op_integration
