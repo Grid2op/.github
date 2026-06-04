@@ -14,13 +14,21 @@
 
 Grid2Op is a simulation environment for fast, reproducible experiments on power grids. Use it to run large-scale powerflows, to train or evaluate "smart controllers" (heuristic, optimization-based, machine-learning, or any combination) under realistic operational constraints, or to model sequential decision-making in power systems.
 
+# License, governance, code of conduct, etc.
+
+Unless otherwise specified, all code hosted in the Grid2op organisation (https://github.com/grid2op) is licensed under the MPL v2 license, available at [LICENSE.md](./LICENSE.md) or at https://mozilla.org/MPL/2.0/.
+
+All code hosted in this organisation should also respect the [CODE OF CONDUCT](./CODE_OF_CONDUCT.md) and follow the decisions of the Grid2op Technical Steering Committee (see the [GOVERNANCE](./GOVERNANCE.md) document for details).
+
+To avoid the misuse of secrets (API keys, GitHub tokens, SSH private keys, etc.), we recommend that all packages follow the best practices in [SECRETS MANAGEMENT](./SECRETS_MANAGEMENT.md). This is enforced for core packages.
+
 # Ecosystem
 
 The Grid2op ecosystem has two parts: **core packages**, which are well maintained, tested, and documented, and **companion packages**, which make the core packages easier to use, integrate them with other tools, or apply them to specific settings.
 
 > Using Grid2op for your own experiments and want to share your work? Open a discussion and we'll look at how it could fit into the ecosystem.
 
-The current roadmap is available here: [ROADMAP](https://github.com/Grid2op/.github/blob/main/ROADMAP.md).
+The current roadmap is available here: [ROADMAP](./ROADMAP.md).
 
 ## Core packages
 
@@ -51,4 +59,4 @@ The ecosystem also includes packages hosted elsewhere, such as:
 - strong solutions to the L2RPN competitions, for example:
   - https://github.com/lajavaness/l2rpn-2023-ljn-agent
   - https://github.com/enlite-ai/maze-l2rpn-2022-submission
-- a "computation engine" based on "dynamics" simulation and the gridpack framework see https://github.com/GridOPTICS/GridPACK/tree/grid2op_integration
+- a "backend" / "computation engine" based on dynamic simulation and the GridPACK framework: https://github.com/GridOPTICS/GridPACK/tree/grid2op_integration
